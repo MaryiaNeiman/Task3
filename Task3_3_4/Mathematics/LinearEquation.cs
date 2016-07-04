@@ -8,20 +8,19 @@ namespace Mathematics
 {
     public class LinearEquation: Equation
     {
-        public override List<double> Solve(List <double> listOfDouble)
+        public  List<double> Solve(List <double> listOfDouble)
         {
-            a = listOfDouble.ElementAt(0);
-            b = listOfDouble.ElementAt(1);
+           
             List<double> list = new List<double>();
 
 
-            if (a != 0)
+            if (listOfDouble.ElementAt(0) != 0)
             {
-                double x = -b / a;
+                double x = -listOfDouble.ElementAt(1) / listOfDouble.ElementAt(0);
                 list.Add(x);
             }
 
-            if(a == 0  && b == 0)
+            if(listOfDouble.ElementAt(0) == 0  && listOfDouble.ElementAt(1) == 0)
             {
                 list.Add(Double.PositiveInfinity);
             }

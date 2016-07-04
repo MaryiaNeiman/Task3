@@ -75,7 +75,7 @@ namespace ConsoleApplication
             double num;
             int flag = 0;
             String[] mark = { ".", "," };
-            while (listOfDouble.Count != 3)
+            while (listOfDouble.Count != 2)
             {
             if(flag !=0 )
                 {
@@ -176,7 +176,7 @@ namespace ConsoleApplication
             String sep = NumberFormatInfo.CurrentInfo.NumberDecimalSeparator;
             double num;
             String[] mark = { ".", "," };
-            while (listOfDouble.Count !=0)
+            while (listOfDouble.Count !=3)
             {
                 Console.Clear();
                 Console.WriteLine("Enter A:");

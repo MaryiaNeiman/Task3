@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Mathematics
 {
-    public abstract class Equation
+    interface Equation
     {
-        protected double a;
-        protected double b;
-
-        public abstract List <double> Solve(List<double> listOfDouble);
+    
+      List <double> Solve(List<double> listOfDouble);
 
     }
 }

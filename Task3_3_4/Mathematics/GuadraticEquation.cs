@@ -9,16 +9,14 @@ namespace Mathematics
     public class QuadraticEquation : Equation
 
     {
-        private double c;
+       
 
-        public override List<double> Solve(List<double> listOfDouble)
+        public  List<double> Solve(List<double> listOfDouble)
         {
-            a = listOfDouble[0];
-            b = listOfDouble[1];
-            c = listOfDouble[2];
+           
             double D;
             List<double> list = new List<double>();
-            if (a == 0 && b == 0 && c == 0)
+            if (listOfDouble[0] == 0 && listOfDouble[1] == 0 && listOfDouble[2] == 0)
             {
                 list.Add(Double.PositiveInfinity);
                 return list;
@@ -26,7 +24,7 @@ namespace Mathematics
             }
            
 
-                if (a == 0)
+                if (listOfDouble[0] == 0)
                 {
                     LinearEquation el = new LinearEquation();
                     listOfDouble.Remove(0);
@@ -37,17 +35,17 @@ namespace Mathematics
             }
 
          
-            D = Math.Pow(b, 2) - 4 * a * c;
+            D = Math.Pow(listOfDouble[1], 2) - 4 * listOfDouble[0] * listOfDouble[2];
             if (D > 0)
             {
-                list.Add((-b + Math.Sqrt(D)) / (2 * a));
-                list.Add((-b - Math.Sqrt(D)) / (2 * a));
+                list.Add((-listOfDouble[1] + Math.Sqrt(D)) / (2 * listOfDouble[0]));
+                list.Add((-listOfDouble[1] - Math.Sqrt(D)) / (2 * listOfDouble[0]));
                 
 
             }
             if (D == 0)
             {
-                list.Add((-b + Math.Sqrt(D)) / (2 * a));              
+                list.Add((-listOfDouble[1] + Math.Sqrt(D)) / (2 * listOfDouble[0]));              
          
 
             }
